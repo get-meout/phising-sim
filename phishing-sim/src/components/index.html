@@ -1,64 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Phishing Templates</title>
     <script src="https://unpkg.com/vue@3.0.2"></script>
     <style>
-      .button {
-        padding: 10px;
-        border: none;
-        cursor: pointer;
-        font-size: 16px;
-      }
-      .buttonNonSelected {
-        background-color: #f0f0f0;
-        color: #333;
-      }
-      .buttonSelected {
-        background-color: #4caf50;
-        color: white;
-      }
-      .preview-container {
-        display: flex;
-        justify-content: center;
-        margin-top: 20px; /* Optional: Add space above the image */
-      }
-      .preview-image {
-        width: 500px; /* Adjust the image size */
-        height: auto;
-      }
-      .container {
-        padding-left: 50px;
-      }
+        .button {
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .buttonNonSelected {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        .buttonSelected {
+            background-color: #4caf50;
+            color: white;
+        }
+        .preview-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px; /* Optional: Add space above the image */
+        }
+        .preview-image {
+            width: 500px; /* Adjust the image size */
+            height: auto;
+        }
+        .container {
+            padding-left: 50px;
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <div id="app">
         <div class="container">
-      <h1>Select a Phishing Template</h1>
-      <ul>
-        <li v-for="(template, index) in templates" :key="index">
-          <button
-            :class="['button', selectedTemplate === template ? 'buttonSelected' : 'buttonNonSelected']"
-            v-on:click="selectTemplate(index)"
-          >
-            {{ template.name }}
-          </button>
-        </li>
-      </ul>
-    </div>
-
-    <div v-if="selectedTemplate" class="preview-container">
-        <div>
-          <h2>Selected Template: {{ selectedTemplate.name }}</h2>
-          <img :src="selectedTemplate.preview" alt="Template Preview" class="preview-image">
-          <br>
-          <button v-on:click="proceedToSend">Use This Template</button>
+            <h1>Select a Phishing Template</h1>
+            <ul>
+                <li v-for="(template, index) in templates" :key="index">
+                    <button
+                        :class="['button', selected_template === template ? 'buttonSelected' : 'buttonNonSelected']"
+                        v-on:click="select_template(index)"
+                    >
+                        {{ template.name }}
+                    </button>
+                </li>
+            </ul>
         </div>
-    </div>
 
-    <script src="app.js"></script>
-  </body>
+        <div v-if="selected_template" class="preview-container">
+            <div>
+                <h2>Selected Template: {{ selected_template.name }}</h2>
+                <img :src="selected_template.preview" alt="Template Preview" class="preview-image">
+                <br>
+                <button v-on:click="proceed_to_send">Use This Template</button>
+            </div>
+        </div>
+
+        <script src="app.js"></script>
+    </div>
+</body>
 </html>
