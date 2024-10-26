@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Edit Email Template</title>
+  <script src="https://unpkg.com/vue@3.0.2"></script>
+</head>
+<body>
+  <div id="app">
+    <h1>Edit Email Template</h1>
+    <div v-if="template">
+      <label>
+        <strong>Subject:</strong>
+        <input type="text" v-model="subject" />
+      </label>
+      <br />
+      <label>
+        <strong>Body:</strong>
+        <textarea v-model="body" rows="10" cols="30"></textarea>
+      </label>
+      <br />
+      <button @click="sendEmail">Send Email</button>
+    </div>
+  </div>
+  
+  <script src="send_email.js"></script>
+</body>
+</html>
