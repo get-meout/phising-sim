@@ -1,0 +1,73 @@
+.button {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+.buttonNonSelected {
+    background-color: #f0f0f0;
+    color: #333;
+}
+.buttonSelected {
+    background-color: #4caf50;
+    color: white;
+}
+.preview-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;  
+}
+.preview-image {
+    width: 500px; 
+    height: auto;
+}
+.container {
+    padding-left: 50px;
+}
+#progress-tracker {
+    display: flex;
+    justify-content: left;
+    padding-left: 50px;
+    font-size: 18px;
+}
+
+#progress-tracker ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    gap: 15px;
+}
+
+#progress-tracker li {
+    cursor: pointer;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.active {
+    color: #007bff; 
+    border-bottom: 2px solid #007bff; 
+}
+
+.subject {
+    width: 250px;
+    padding: 10px; 
+    font-size: 16px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 10px;
+}
+
+label {
+    margin-right: 10px;  
+    width: 150px; 
+}
+
+input {
+    width: 200px; 
+    padding: 8px; 
+}

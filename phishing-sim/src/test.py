@@ -1,14 +1,5 @@
-import datetime as DT
-today = DT.date.today()
-week_ago = today + DT.timedelta(days=7)
 
-formatted_date = week_ago.strftime("%d %b")
-day = int(week_ago.strftime("%d"))
 
-if 4 <= day <= 20 or 24 <= day <= 30:
-    suffix = "th"
-else:
-    suffix = ["st", "nd", "rd"][day % 10 - 1]
-
-formatted_date = f"{day}{suffix} {week_ago.strftime('%b')}"
-print(formatted_date)
+body = f"""  <h2 class="ql-align-center">Upcoming Company Lunch</h2><p>Hello Team,</p><p>We’re excited to announce an upcoming company lunch next week on November 4! It’ll be a great opportunity for everyone to relax, enjoy some delicious food, and catch up with colleagues.</p><p>Please click the link below to view the menu and make your meal selection in advance:</p><p><br></p><p class="ql-align-center"><a href="www.replaceme.com" target="_blank" style="background-color: rgb(0, 102, 204); color: rgb(255, 255, 255);">View Menu and Select Your Meal</a></p><p>We look forward to seeing you all there! If you have any questions, feel free to reach out to HR.</p><p>Best Regards,</p><p><strong>Jamie Lee</strong></p><p> Office Administrator</p>"""
+link = "www.google.com"
+print(body.replace("www.replaceme.com", "www.google.com"))

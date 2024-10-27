@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Send Email</title>
+        <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+        <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+        <script src="https://unpkg.com/vue@3"></script>
+        <link rel="stylesheet" type="text/css" href="/src/assets/index.css" />
+    </head>
+    <body>
+        <div id="app">
+            <div id="progress-tracker">
+                <ul>
+                    <li @click="go_to(1)">Select Template</li> <li>></li>
+                    <li @click="go_to(2)">Edit Template</li> <li>></li>
+                    <li class="active" @click="go_to(3)">Enter Details</li>
+                </ul>
+            </div>
+            <div class="container">
+                <h1>Edit Email Template</h1>
+                <div class="form-group">
+                    <label for="sender_email">Your Email:</label>
+                    <input type="email" id="sender_email" v-model="sender_email" />
+                </div>
+
+                <div class="form-group">
+                    <label for="email_password">Email Password:</label>
+                    <input type="password" id="email_password" v-model="email_password" />
+                </div>
+
+                <div class="form-group">
+                    <label for="email_link">Link to Send:</label>
+                    <input type="text" id="email_link" v-model="email_link" />
+                </div>
+
+                <div class="form-group">
+                    <label for="recipient_email">Recipient's Email:</label>
+                    <input type="email" id="recipient_email" v-model="recipient_email" />
+                </div>
+                <button @click="send">Send</button>
+
+            </div>
+
+        </div>
+    
+        <script type="module" src="enter_details.js"></script>
+    </body>
+</html>
+        

@@ -1,4 +1,4 @@
-export function gen_company_lunch(link) {
+export function gen_company_lunch() {
     const date = return_date();
     return `
         <div style="max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ddd; background-color: #f9f9f9;">
@@ -7,7 +7,7 @@ export function gen_company_lunch(link) {
             <p>We’re excited to announce an upcoming company lunch next week on ${date}! It’ll be a great opportunity for everyone to relax, enjoy some delicious food, and catch up with colleagues.</p>
             <p>Please click the link below to view the menu and make your meal selection in advance:</p>
             <p style="text-align: center; margin: 20px;">
-                <a href="${link}" style="display: inline-block; padding: 10px 20px; color: #fff; background-color: #0066cc; text-decoration: none; border-radius: 4px;">View Menu and Select Your Meal</a>
+                <a href="www.replaceme.com" style="display: inline-block; padding: 10px 20px; color: #fff; background-color: #0066cc; text-decoration: none; border-radius: 4px;">View Menu and Select Your Meal</a>
             </p>
             <p>We look forward to seeing you all there! If you have any questions, feel free to reach out to HR.</p>
             <p>Best Regards,<br>
@@ -17,7 +17,7 @@ export function gen_company_lunch(link) {
     `;
 }
 
-export function gen_saudi_prince(link) {
+export function gen_saudi_prince() {
     return `
         <div style="max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ddd; background-color: #f9f9f9;">
             <h2 style="text-align: center; color: #003366;">Request for Confidential Assistance</h2>
@@ -30,7 +30,7 @@ export function gen_saudi_prince(link) {
             <p><strong>Prince Abdulaziz Al-Saud</strong><br>
             Kingdom of Saudi Arabia</p>
             <div style="text-align: center; margin-top: 20px;">
-                <a href="${link}" style="display: inline-block; padding: 10px 20px; color: #fff; background-color: #003366; text-decoration: none; border-radius: 4px;">
+                <a href="www.replaceme.com" style="display: inline-block; padding: 10px 20px; color: #fff; background-color: #003366; text-decoration: none; border-radius: 4px;">
                     Confirm Details
                 </a>
             </div>
@@ -38,7 +38,7 @@ export function gen_saudi_prince(link) {
     `;
 }
 
-export function gen_sign_in(email, link) {
+export function gen_sign_in() {
     return `
         <div style="margin: 0; padding: 0;" bgcolor="#FFFFFF">
             <table width="100%" height="100%" style="min-width: 348px;" border="0" cellspacing="0" cellpadding="0">
@@ -59,15 +59,15 @@ export function gen_sign_in(email, link) {
                                                         <img width="20" height="20" style="width: 20px; height: 20px; vertical-align: sub; border-radius: 50%;" src="https://lh3.googleusercontent.com/a/ACg8ocJJADxTQu21YeuE7NqdcM_CmSkrGG9lds6Ey80wKJgg0kVr1Q=s96-c" alt="">
                                                     </td>
                                                     <td>
-                                                        <a style="font-family: 'Google Sans',Roboto,RobotoDraft,Helvetica,Arial,sans-serif;color: rgba(0,0,0,0.87); font-size: 14px; line-height: 20px;">${email}</a>
+                                                        <a style="font-family: 'Google Sans',Roboto,RobotoDraft,Helvetica,Arial,sans-serif;color: rgba(0,0,0,0.87); font-size: 14px; line-height: 20px;">replaceme@gmail.com</a>
                                                     </td>
                                                 </tr>
                                             </table>
                                         </div>
                                         <div style="font-family: Roboto-Regular,Helvetica,Arial,sans-serif; font-size: 14px; color: rgba(0,0,0,0.87); line-height: 20px;padding-top: 20px; text-align: left;">
-                                            <p>Your Google Account ${email} is now protected with 2-Step Verification. When you sign in on a new or untrusted device, you’ll need your second factor to verify your identity.</p>
+                                            <p>Your Google Account replaceme@gmail.com is now protected with 2-Step Verification. When you sign in on a new or untrusted device, you’ll need your second factor to verify your identity.</p>
                                             <p><b>Don't get locked out!</b><br>You can add a backup phone or get backup codes to use when you don’t have your second factor with you.</p>
-                                            You can <a href="${link}" style="text-decoration: none; color: #4285F4;" target="_blank">review your 2SV settings</a> to make changes.
+                                            You can <a href="www.replaceme.com" style="text-decoration: none; color: #4285F4;" target="_blank">review your 2SV settings</a> to make changes.
                                         </div>
                                     </div>
                                 </td>

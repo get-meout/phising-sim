@@ -14,11 +14,20 @@ const app = Vue.createApp({
             this.selected_template = this.templates[index];
         },
         proceed_to_send() {
-            const template = this.selected_template.name; // Just use the name
-            window.location.href = "send_email.html?template=" + encodeURIComponent(template);
+            if (this.selected_template) {
+                const templateName = this.selected_template.name; 
+                window.location.href = "edit_email.html?template=" + encodeURIComponent(templateName);
+            } else {
+                alert("Please select a template before proceeding.");
+            }
         },
         go_back() {
             window.location.href = "index.html";
+        },
+        goToStep(step) {
+            if (step === 1) {
+                window.location.href = "index.html";
+            }
         }
     }
 });
